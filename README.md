@@ -3,8 +3,6 @@ td-vue
 
 https://ja.vuejs.org/
 
-https://vuetifyjs.com/ja/
-
 https://ja.vite.dev/
 
 ---

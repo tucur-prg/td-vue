@@ -7,7 +7,7 @@ import 'vuetify/styles'
 
 import { createVuetify } from 'vuetify'
 
-const vuetify = createVuetify({
+export const vuetify = createVuetify({
     components: {
     },
     defaults: {
@@ -16,7 +16,3 @@ const vuetify = createVuetify({
       VNumberInput: { density: 'compact', variant: 'outlined', controlVariant: 'split' }
     }
 })
-
-export function registerVuetify(app: App) {
-    app.use(vuetify)
-}

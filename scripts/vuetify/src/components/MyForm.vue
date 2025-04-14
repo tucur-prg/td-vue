@@ -2,6 +2,28 @@
 import { ref } from 'vue'
 
 const count = ref(0)
+
+import SelectBox from '@/components/inputs/SelectBox.vue'
+
+const id = ref("")
+const items = ref([
+  {
+    id: "0000-0001",
+    name: "select 1",
+  },
+  {
+    id: "0000-0002",
+    name: "select 2",
+  },
+  {
+    id: "0000-0003",
+    name: "select 3",
+  },
+])
+
+function onUpdate(v: string) {
+  id.value = v
+}
 </script>
 
 <template>
@@ -16,9 +38,37 @@ const count = ref(0)
     label=""
     :hideInput="false"
     :inset="false"
-  ></v-number-input>
+  />
+
+  <SelectBox
+    :items="items"
+    itemTitle="name"
+    itemValue="id"
+    v-model="id"
+    prepend-inner-icon="mdi-vector-arrange-below"
+    @update:modelValue="onUpdate"
+  >
+    <template #append-item>
+
+      <v-divider></v-divider>
+      <v-list-item @click="" class="add-item" color="primary">
+        <v-list-item-content class="d-flex align-center">
+          <v-icon class="mr-2" color="primary">mdi-plus</v-icon>
+          <div>
+            <div class="primary--text font-weight-medium">新しい項目を追加</div>
+          </div>
+        </v-list-item-content>
+      </v-list-item>
+
+    </template>
+  </SelectBox>
+  <div>{{ id }}</div>
 
 </template>
 
 <style scoped>
+.add-item:hover {
+  background-color: #E3F2FD;
+  cursor: pointer;
+}
 </style>

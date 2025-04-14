@@ -1,11 +1,8 @@
-// Types
-import type { App } from 'vue'
+import { createVuetify } from 'vuetify'
 
 // style
 import '@mdi/font/css/materialdesignicons.css'
 import 'vuetify/styles'
-
-import { createVuetify } from 'vuetify'
 
 export const vuetify = createVuetify({
     components: {

@@ -7,12 +7,12 @@ import Store from '@/components/Store.vue'
   <div>
     <h2>ref</h2>
     <Ref />
-    <br><br>
+    <br /><br />
     <Ref />
-    <hr>
+    <hr />
     <h2>Pinia</h2>
     <Store />
-    <br><br>
+    <br /><br />
     <Store />
   </div>
 </template>

@@ -5,20 +5,20 @@ const count = ref(0)
 
 import SelectBox from '@/components/inputs/SelectBox.vue'
 
-const id = ref("")
+const id = ref('')
 const items = ref([
   {
-    id: "0000-0001",
-    name: "select 1",
+    id: '0000-0001',
+    name: 'select 1'
   },
   {
-    id: "0000-0002",
-    name: "select 2",
+    id: '0000-0002',
+    name: 'select 2'
   },
   {
-    id: "0000-0003",
-    name: "select 3",
-  },
+    id: '0000-0003',
+    name: 'select 3'
+  }
 ])
 
 function onUpdate(v: string) {
@@ -49,7 +49,6 @@ function onUpdate(v: string) {
     @update:modelValue="onUpdate"
   >
     <template #append-item>
-
       <v-divider></v-divider>
       <v-list-item @click="" class="add-item" color="primary">
         <v-list-item-content class="d-flex align-center">
@@ -59,16 +58,14 @@ function onUpdate(v: string) {
           </div>
         </v-list-item-content>
       </v-list-item>
-
     </template>
   </SelectBox>
   <div>{{ id }}</div>
-
 </template>
 
 <style scoped>
 .add-item:hover {
-  background-color: #E3F2FD;
+  background-color: #e3f2fd;
   cursor: pointer;
 }
 </style>

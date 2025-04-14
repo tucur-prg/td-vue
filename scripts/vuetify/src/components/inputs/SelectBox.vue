@@ -10,13 +10,7 @@ const model = defineModel()
 </script>
 
 <template>
-  <v-select
-    v-model="model"
-    :items
-    :item-title="itemTitle"
-    :item-value="itemValue"
-    :rules="rules"
-  >
+  <v-select v-model="model" :items :item-title="itemTitle" :item-value="itemValue" :rules="rules">
     <template #message="{ message }"> Custom: {{ message }} </template>
     <template #prepend-item>
       <slot name="prepend-item" />

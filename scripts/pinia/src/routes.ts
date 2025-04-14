@@ -11,5 +11,5 @@ export const routes = [
   { path: '/subscribe', component: Subscribe },
   { path: '/local1', component: Local1 },
   { path: '/local2', component: Local2 },
-  { path: '/list', component: List },
+  { path: '/list', component: List }
 ]

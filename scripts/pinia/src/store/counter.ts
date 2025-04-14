@@ -1,6 +1,10 @@
 import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 
+export interface CounterStore {
+    count: number
+}
+
 // Setup Stores
 export const useCounterStore = defineStore('counter', () => {
     const count = ref(0)

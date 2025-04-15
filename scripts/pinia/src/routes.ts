@@ -4,6 +4,7 @@ import Subscribe from '@/pages/Subscribe.vue'
 import Local1 from '@/pages/Local1.vue'
 import Local2 from '@/pages/Local2.vue'
 import List from '@/pages/List.vue'
+import Async from '@/pages/Async.vue'
 
 export const routes = [
   { path: '/', component: Home },
@@ -11,5 +12,6 @@ export const routes = [
   { path: '/subscribe', component: Subscribe },
   { path: '/local1', component: Local1 },
   { path: '/local2', component: Local2 },
-  { path: '/list', component: List }
+  { path: '/list', component: List },
+  { path: '/async', component: Async }
 ]

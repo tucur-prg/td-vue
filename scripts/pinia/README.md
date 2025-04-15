@@ -57,3 +57,9 @@ https://router.vuejs.org/
 
 
 
+# vanilla
+
+## async / await / promise
+
+[【TypeScript】allとraceだけじゃない！4つのPromise並列処理の違い【JavaScript】 | TekRog](https://tekrog.com/typescript-promise-cocurrency)  
+

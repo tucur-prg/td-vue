@@ -1,6 +1,12 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Loading from '@/components/Loading.vue'
+import { useLoadingStore } from '@/store/loading'
+
+const store = useLoadingStore()
+</script>
 
 <template>
+  <Loading v-show="store.isLoading" />
   <p><strong>Current route path:</strong> {{ $route.fullPath }}</p>
   <nav>
     <RouterLink class="nav-link" to="/">Home</RouterLink>
@@ -9,6 +15,7 @@
     <RouterLink class="nav-link" to="/local1">Local 1</RouterLink>
     <RouterLink class="nav-link" to="/local2">Local 2</RouterLink>
     <RouterLink class="nav-link" to="/list">List</RouterLink>
+    <RouterLink class="nav-link" to="/async">Async</RouterLink>
   </nav>
   <hr />
   <main>

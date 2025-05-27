@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import MyForm from './components/MyForm.vue'
+import MyTabs from './components/MyTabs.vue'
 </script>
 
 <template>
-  <MyForm />
+  <MyTabs />
 </template>
 
 <style scoped>

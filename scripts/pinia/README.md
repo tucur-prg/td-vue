@@ -55,6 +55,14 @@ https://router.vuejs.org/
 > 実行タイミングは beforeCreate と created のあいだ
 
 
+# suspense
+
+https://ja.vuejs.org/guide/built-ins/suspense
+
+
+# props
+
+https://ja.vuejs.org/guide/components/props
 
 
 # vanilla

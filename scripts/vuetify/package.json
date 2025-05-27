@@ -11,6 +11,7 @@
   "dependencies": {
     "vite-plugin-vuetify": "^2.1.1",
     "vue": "^3.5.13",
+    "vue-advanced-cropper": "^2.8.9",
     "vuetify": "^3.8.1"
   },
   "devDependencies": {

@@ -6,7 +6,7 @@ import NoImage from '../assets/vue.svg'
 
 const isActive = ref(false)
 const img = ref(NoImage)
-const selectedUrl = ref()
+const selectedUrl = ref('')
 const selectedFile = ref<File | null>(null)
 
 const onFileChange = (event: Event) => {
@@ -26,8 +26,26 @@ const onFileChange = (event: Event) => {
 }
 
 const confirmed = (canvas: HTMLCanvasElement) => {
-  const croppedData = canvas.toDataURL()
-  img.value = croppedData
+  const croppedData = canvas.toDataURL('image/png')
+
+  canvas.toBlob((blob) => {
+    if (blob) {
+      if (blob.size > 100000) {
+        console.log('Image size over.')
+        return
+      }
+      console.log('size', blob.size)
+      const url = URL.createObjectURL(blob)
+      const tmpImg = new Image()
+      tmpImg.onload = () => {
+        console.log('w/h', tmpImg.width, tmpImg.height)
+        URL.revokeObjectURL(url)
+      }
+      tmpImg.src = url
+      img.value = croppedData
+    }
+  }, 'image/png')
+
   isActive.value = false
 }
 const remove = () => {
@@ -54,4 +72,6 @@ const remove = () => {
     画像を選択
     <input type="file" accept="image/*" @change="onFileChange" style="display: none" />
   </label>
+
+  <div>{{ img }}</div>
 </template>

@@ -51,12 +51,12 @@ function onUpdate(v: string) {
     <template #append-item>
       <v-divider></v-divider>
       <v-list-item @click="" class="add-item" color="primary">
-        <v-list-item-content class="d-flex align-center">
+        <div class="d-flex align-center">
           <v-icon class="mr-2" color="primary">mdi-plus</v-icon>
           <div>
             <div class="primary--text font-weight-medium">新しい項目を追加</div>
           </div>
-        </v-list-item-content>
+        </div>
       </v-list-item>
     </template>
   </SelectBox>
